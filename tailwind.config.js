@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+  // eslint-disable-next-line no-undef
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -27,6 +28,9 @@ module.exports = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        gray: "hsl(var(--gray))",
+        "light-gray": "hsl(var(--light-gray))",
+        "dark-gray": "hsl(var(--dark-gray))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -73,5 +77,6 @@ module.exports = {
       },
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require("tailwindcss-animate")],
 }
