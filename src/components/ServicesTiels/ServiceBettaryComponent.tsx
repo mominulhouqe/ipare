@@ -1,18 +1,12 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import useScrolGrow from "@/hooks/useScrolGrow";
+import { motion} from "framer-motion";
+
 
 const ServiceBettaryComponent = () => {
-  const componentRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: componentRef,
-    offset: ["0 1", "2 1"],
-  });
-  const scalValues = useTransform(scrollYProgress,[0, 1],[0.7, 1])
+const{style,componentRef} =useScrolGrow();
   return (
     <motion.div
-      style={{
-        scale: scalValues,
-      }}
+      style={style}
       ref={componentRef}
       className="col-span-12 bg-red-400 h-44 rounded-2xl"
     ></motion.div>
