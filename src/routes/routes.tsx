@@ -1,3 +1,4 @@
+import AddService from "@/Admin/AddService";
 import Dashboard from "@/Admin/Dashboard";
 import ServiceList from "@/Admin/ServiceList";
 import App from "@/App";
@@ -5,7 +6,7 @@ import AdminLayout from "@/components/Layouts/AdminLayout";
 import About from "@/pages/About";
 import Home from "@/pages/Home";
 
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -22,13 +23,22 @@ const router = createBrowserRouter([
       },
     ],
   },
+  
   {
     path: "/admin",
     element: <AdminLayout />,
     children: [
       {
         index: true,
+        element: <Navigate to="/admin/dashboard" />,
+      },
+      {
+        path: "dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "add-service",
+        element: <AddService />,
       },
       {
         path: "service-list",

@@ -1,7 +1,7 @@
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className="bg-green-300">
             This is admin dashboard Home
         </div>
     );
