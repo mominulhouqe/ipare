@@ -57,7 +57,7 @@ const HeroSection = () => {
 
   return (
     <div className="overflow-hidden">
-      <Container className="h-screen grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 mx-auto  ">
+      <Container className="h-screen grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 mx-auto ">
         <motion.div variants={intro} initial="hidden" animate="visible">
           <motion.h1
             variants={introChildren}
